@@ -9,4 +9,4 @@ To install this, open about:support, open the profile folder, and copy the chrom
 If the theme doesn't apply, go to about:config and set toolkit.legacyUserProfileCustomizations.stylesheets to true.
 
 ## Screenshot
-<img src="basicfirefox.PNG" width=500px height=500px>
+<img src="basicfirefox.PNG">
