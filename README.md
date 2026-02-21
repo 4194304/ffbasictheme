@@ -7,3 +7,6 @@ This is NOT a theme that should be used with the normal DWM titlebars, and shoul
 To install this, open about:support, open the profile folder, and copy the chrome folder into the profile folder.
 
 If the theme doesn't apply, go to about:config and set toolkit.legacyUserProfileCustomizations.stylesheets to true.
+
+## Screenshot
+<img src="basicfirefox.png" width=500px height=500px>
