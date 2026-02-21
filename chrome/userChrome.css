@@ -125,3 +125,7 @@ root {
     background-image:url("minimize-inactive.png");
   }
 }
+
+#TabsToolbar:-moz-window-inactive { 
+   opacity: 1 !important; 
+}
