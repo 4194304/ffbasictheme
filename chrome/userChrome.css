@@ -126,6 +126,22 @@ root {
   }
 }
 
+/* Inactive window dimming fix */
+
 #TabsToolbar:-moz-window-inactive { 
    opacity: 1 !important; 
+}
+
+/* Hovered window buttons as a fallback */
+.titlebar-button.titlebar-close:hover {
+  background-image:url("close-hover.png");
+}
+.titlebar-button.titlebar-max:hover {
+  background-image:url("maximize-hover.png");
+}
+.titlebar-button.titlebar-min:hover {
+  background-image:url("minimize-hover.png");
+}
+.titlebar-button.titlebar-restore:hover {
+  background-image:url("restore-hover.png");
 }
