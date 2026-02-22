@@ -14,7 +14,7 @@ root {
   filter: saturate(25%);
   filter: brightness(150%);
   border-radius:5px !important;
-  margin:4px 0px 3px 0px !important;
+  margin:5px 0px 3px 0px !important;
 }
 
 @media (prefers-color-scheme: light) {
