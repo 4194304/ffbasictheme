@@ -2,12 +2,28 @@ root {
   --toolbar-bgcolor-inactive: color-mix(in oklab, var(--toolbar-bgcolor), white 20%);
 }
 #tabbrowser-arrowscrollbox, .titlebar-buttonbox, .titlebar-spacer {
-  background-image:url("border.png") !important;
-  background-repeat:repeat-x;
+  position:relative;
+  background-image: linear-gradient(to bottom, #98B4D0, #B9D1EA);
+}
+#tabbrowser-arrowscrollbox::before, .titlebar-buttonbox::before, .titlebar-spacer::before, #tabbrowser-arrowscrollbox::after, .titlebar-buttonbox::after, .titlebar-spacer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.0625rem;
+}
+#tabbrowser-arrowscrollbox::before, .titlebar-buttonbox::before, .titlebar-spacer::before {
+  top:0px;
+  background-color: #343434;
+  transform: scale(1);
+}
+#tabbrowser-arrowscrollbox::after, .titlebar-buttonbox::after, .titlebar-spacer::after {
+  top:0.0625rem;
+  background-color: #ffffff;
+  transform: scale(1);
 }
 #tabbrowser-arrowscrollbox:-moz-window-inactive, .titlebar-buttonbox:-moz-window-inactive, .titlebar-spacer:-moz-window-inactive {
-  background-image:url("border-inactive.png") !important;
-  background-repeat:repeat-x;
+   background-image: linear-gradient(to bottom, #BFCDDB, #D7E4F2);
 }
 .tab-background {
   background-color:var(--toolbar-bgcolor) !important;
@@ -72,31 +88,31 @@ root {
   padding-left:16px !important;
 }
 
-/* Maximized buttons, change min-width to your screen width */
-@media (min-width: 1920px) {
+/* Maximized buttons, change min-width to your screen width, for conversion 16px = 1rem */
+@media (min-width: 120rem) {
    .titlebar-button {
      font: 0px Arial, sans-serif !important;
-     margin-bottom:24px !important;
      background-color:transparent !important;
+     background-position: top 0.125rem center !important;
   }
   .titlebar-button.titlebar-close {
     background-image:url("close.png");
     background-repeat:no-repeat;
-    background-position:center;
+    background-position: top 0.125rem center !important;
     padding-right:17px !important;
     padding-left:16px !important;
   }
   .titlebar-button.titlebar-restore {
     background-image:url("restore.png");
     background-repeat:no-repeat;
-    background-position:center;
+    background-position: top 0.125rem center !important;
     padding-right:14px !important;
     padding-left:16px !important;
   }
   .titlebar-button.titlebar-min {
     background-image:url("minimize.png");
     background-repeat:no-repeat;
-    background-position:center;
+    background-position: top 0.125rem center !important;
     padding-right:15px !important;
     padding-left:16px !important;
   }
@@ -114,12 +130,13 @@ root {
 }
 
 /* Also change this if your screen size isn't 1080p */
-@media (min-width: 1920px) {
+@media (min-width: 120rem) {
    .titlebar-button.titlebar-close:-moz-window-inactive {
     background-image:url("close-inactive.png");
   }
   .titlebar-button.titlebar-restore:-moz-window-inactive {
     background-image:url("restore-inactive.png");
+    background-repeat:no-repeat;
   }
   .titlebar-button.titlebar-min:-moz-window-inactive {
     background-image:url("minimize-inactive.png");
@@ -144,4 +161,5 @@ root {
 }
 .titlebar-button.titlebar-restore:hover {
   background-image:url("restore-hover.png");
+  background-repeat:no-repeat;
 }
