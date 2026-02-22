@@ -6,6 +6,8 @@ This is NOT a theme that should be used with the normal DWM titlebars, and inste
 ### IMPORTANT:
 If your screen size is a size other than 1080p, go into the CSS file and change the numbers for the lines starting with @media. They are in rems (to avoid Firefox interface scaling), so you'll have to multiply your screen size in pixels by 0.0625 to get the size in rems.
 
+In addition, you might also have to make the titlebars of windows slightly smaller if you're using the default titlebar size, as otherwise you might see the real buttons display on top of the fake ones implemented by this theme.
+
 ## Install
 To install this, open about:support, open the profile folder, and copy the chrome folder into the profile folder.
 
